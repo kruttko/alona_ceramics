@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Order confirmed — Stenkärl</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="sig">Stenkärl</span>
+      <span class="sub">ceramics studio</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero wrap">
+    <p class="eyebrow reveal is-in">Thank you</p>
+    <div class="hero-grid">
+      <h1 class="headline reveal is-in">Order <em>confirmed.</em></h1>
+      <div class="hero-copy reveal is-in">
+        <p>Your payment went through — a confirmation email is on its way from Stripe. Each piece is wrapped and shipped within a few days.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:0;">
+    <div class="wrap">
+      <a href="shop.html" style="font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--clay); border-bottom:1px solid var(--clay); text-decoration:none;">← Back to shop</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="sig">Stenkärl</div>
+        <div class="copyright">© <span id="y"></span> Stenkärl Ceramics</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  // clear the cart now that checkout succeeded
+  try { localStorage.removeItem('stenkarl_cart_v1'); } catch (e) {}
+</script>
+
+</body>
+</html>

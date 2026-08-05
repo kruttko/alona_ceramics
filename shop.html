@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shop — Alona Ceramics</title>
+<meta name="description" content="Alona Ceramics — shop handmade stoneware ceramics." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="sig">Alona</span>
+      <span class="sub">ceramics</span>
+    </a>
+    <div class="header-right">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav-link" href="index.html">About</a>
+        <a class="nav-link is-active" href="shop.html">Shop</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+      <a href="https://www.instagram.com/alonaceramics" class="nav-link" aria-label="Instagram" target="_blank" style="display:flex; align-items:center; gap:6px;">
+        <span class="ig" aria-hidden="true"></span> IG
+      </a>
+      <button type="button" class="cart-toggle" id="cartToggle" aria-label="Open cart">
+        CART <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero wrap" style="padding-bottom:56px;">
+    <p class="eyebrow reveal">Seattle, WA — small batches</p>
+    <div class="hero-grid">
+      <h1 class="headline reveal">Pieces made<br /><em>ready</em> to use.</h1>
+      <div class="hero-copy reveal">
+        <p>Each listing is a single small batch. Once a piece sells, it's gone — new work is added as it comes out of the kiln.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="shop">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="title">Shop</h2>
+        <p class="section-note">Tap a piece for details</p>
+      </div>
+
+      <div class="shop-grid reveal">
+
+        <!-- <button type="button" class="product p1"
+          data-title="Lidded Jar"
+          data-price="$38"
+          data-desc="Hand-thrown stoneware jar finished in a rich, earthy glaze with subtle bronze undertones. Perfect for storing salt, sugar, tea, jewelry, or other small treasures. Each piece is one of a kind. Capacity: ___ oz / ___ ml"
+          data-buy="https://buy.stripe.com/28EdRa5Gc1la6VV7ascIE02"
+          data-images="images/shop/brown-jar-1.jpg,images/shop/brown-jar-2.jpg,images/shop/brown-jar-3.jpg">
+          <span class="product-photo"></span>
+          <span class="product-meta">
+            <span class="product-name">Lidded Jar</span>
+            <span class="product-price">$34</span>
+          </span>
+        </button> -->
+        <article class="product p1" data-id="lidded-jar" tabindex="0" role="button" aria-label="View Lidded Jar details"
+  data-title="Lidded Jar"
+  data-price="$38"
+  data-desc="Hand-thrown stoneware jar finished in a rich, earthy glaze with subtle bronze undertones. Perfect for storing salt, sugar, tea, jewelry, or other small treasures. Each piece is one of a kind. Capacity: ___ oz / ___ ml"
+  data-price-id="price_1U0qgIKdLBWXC8zBX1u1v7pu"
+  data-images="images/shop/brown-jar-1.jpg,images/shop/brown-jar-2.jpg,images/shop/brown-jar-3.jpg">
+  <span class="product-photo">
+    <span class="sold-out-badge">Sold out</span>
+  </span>
+  <span class="product-meta">
+    <span class="product-name">Lidded Jar</span>
+    <span class="product-price">$34</span>
+  </span>
+  <button type="button" class="add-cart-btn">+ Add to cart</button>
+</article>
+
+        <!-- <button type="button" class="product p2"
+          data-title="Cup"
+          data-price="$32"
+          data-desc="Hand-thrown stoneware cup with a speckled ivory glaze and exposed dark clay. Comfortable to hold and perfect for coffee, tea, or other hot and cold beverages. Dishwasher and microwave safe. Holds 11oz."
+          data-buy="https://buy.stripe.com/REPLACE_ME_2"
+          data-images="images/shop/winterwood-cup-1.jpg,images/shop/winterwood-cup-2.jpg,images/shop/winterwood-cup-3.jpg">
+          <span class="product-photo"></span>
+          <span class="product-meta">
+            <span class="product-name">Cup</span>
+            <span class="product-price">$32</span>
+          </span>
+        </button> -->
+
+        <article class="product p2" data-id="cup" data-sold-out="true" tabindex="0" role="button" aria-label="View Cup details"
+  data-title="Cup"
+  data-price="$32"
+  data-desc="Hand-thrown stoneware cup with a speckled ivory glaze and exposed dark clay. Comfortable to hold and perfect for coffee, tea, or other hot and cold beverages. Dishwasher and microwave safe. Holds 11oz."
+  data-price-id="price_1U0qt7KdLBWXC8zBhpLLe24u"
+  data-images="images/shop/winterwood-cup-1.jpg,images/shop/winterwood-cup-2.jpg,images/shop/winterwood-cup-3.jpg">
+  <span class="product-photo">
+    <span class="sold-out-badge">Sold out</span>
+  </span>
+  <span class="product-meta">
+    <span class="product-name">Cup</span>
+    <span class="product-price">$32</span>
+  </span>
+  <button type="button" class="add-cart-btn">+ Add to cart</button>
+</article>
+
+        <button type="button" class="product p3"
+          data-title="Mug"
+          data-price="$46"
+          data-desc="Text. 16cm diameter."
+          data-buy="https://buy.stripe.com/REPLACE_ME_3"
+          data-images="images/shop/winterwood-mug-1.jpg,images/shop/winterwood-mug-2.jpg,images/shop/winterwood-mug-3.jpg,images/shop/winterwood-mug-4.jpg">
+          <span class="product-photo"></span>
+          <span class="product-meta">
+            <span class="product-name">Mug</span>
+            <span class="product-price">$38</span>
+          </span>
+        </button>
+
+        <button type="button" class="product p4"
+          data-title="Sand Mug"
+          data-price="$68"
+          data-desc="Text. 22cm tall, holds 1L."
+          data-buy="https://buy.stripe.com/REPLACE_ME_4"
+          data-images="images/shop/sand-mug-1.jpg,images/shop/sand-mug-2.jpg,images/shop/sand-mug-3.jpg,images/shop/sand-mug-4.jpg">
+          <span class="product-photo"></span>
+          <span class="product-meta">
+            <span class="product-name">Sand Mug</span>
+            <span class="product-price">$35</span>
+          </span>
+        </button>
+
+        <button type="button" class="product p5"
+          data-title="Speckled Bowl"
+          data-price="$54"
+          data-desc="Text. 8cm each."
+          data-buy="https://buy.stripe.com/8x24gAc4A3ti2FFdyQcIE03"
+          data-images="images/shop/winterwood-bowl-1.jpg,images/shop/winterwood-bowl-2.jpg,images/shop/winterwood-bowl-3.jpg,images/shop/winterwood-bowl-4.jpg">
+          <span class="product-photo"></span>
+          <span class="product-meta">
+            <span class="product-name">Speckled Bowl</span>
+            <span class="product-price">$49</span>
+          </span>
+        </button>
+
+<div class="product product-soon">
+  <div class="product-photo">
+    <img src="images/shop/coming-soon.jpg" alt="More coming soon" />
+  </div>
+</div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" id="contact">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="sig">Alona</div>
+        <div class="copyright">© <span id="y"></span> Alona Ceramics</div>
+      </div>
+      <div class="pills">
+        <span class="pill">Seattle, WA</span>
+        <span class="pill">Stoneware</span>
+        <span class="pill">Earthenware</span>
+        <span class="pill">Cone 4–6</span>
+      </div>
+    </div>
+    <div class="contact-row">
+      <!-- <span>Studio inquiries &amp; commissions</span> -->
+      <a href="mailto:krutko.alona@gmail.com">krutko.alona@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== Cart drawer ===== -->
+<div class="cart-overlay" id="cartOverlay">
+  <div class="cart-drawer">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button type="button" class="cart-close" id="cartClose" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <p class="cart-empty-note" id="cartEmptyNote">Your cart is empty.</p>
+    <div class="cart-footer">
+      <div class="cart-total-row"><span>Total</span><span id="cartTotal">$0</span></div>
+      <button type="button" class="cart-checkout-btn" id="cartCheckoutBtn">Checkout</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Product modal ===== -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <button type="button" class="modal-close" id="modalClose" aria-label="Close">✕</button>
+
+    <div class="modal-carousel">
+      <div class="modal-track" id="modalTrack"></div>
+      <button type="button" class="modal-arrow prev" id="modalPrev" aria-label="Previous image">‹</button>
+      <button type="button" class="modal-arrow next" id="modalNext" aria-label="Next image">›</button>
+      <div class="modal-dots" id="modalDots"></div>
+    </div>
+
+    <div class="modal-info">
+      <p class="modal-eyebrow">Alona Ceramics</p>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <p class="modal-desc" id="modalDesc"></p>
+      <p class="modal-price" id="modalPrice"></p>
+      <button type="button" class="modal-buy" id="modalCartBtn">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  const CART_KEY = 'stenkarl_cart_v1';
+  let cart = [];
+  try { cart = JSON.parse(localStorage.getItem(CART_KEY)) || []; } catch (e) { cart = []; }
+
+  function saveCart(){ localStorage.setItem(CART_KEY, JSON.stringify(cart)); }
+  function isInCart(id){ return cart.includes(id); }
+  function getProductById(id){ return document.querySelector('.product[data-id="' + id + '"]'); }
+
+  function addToCart(id){
+    const el = getProductById(id);
+    if (!el || el.dataset.soldOut === 'true' || isInCart(id)) return;
+    cart.push(id);
+    saveCart();
+    renderAll();
+  }
+  function removeFromCart(id){
+    cart = cart.filter(x => x !== id);
+    saveCart();
+    renderAll();
+  }
+
+  function renderCartDrawer(){
+    const itemsWrap = document.getElementById('cartItems');
+    const totalEl = document.getElementById('cartTotal');
+    const emptyNote = document.getElementById('cartEmptyNote');
+    const checkoutBtn = document.getElementById('cartCheckoutBtn');
+
+    itemsWrap.innerHTML = '';
+    let total = 0;
+
+    cart.forEach(id => {
+      const el = getProductById(id);
+      if (!el) return;
+      const title = el.dataset.title;
+      const price = parseFloat((el.dataset.price || '0').replace(/[^0-9.]/g, ''));
+      total += price;
+      const firstImg = (el.dataset.images || '').split(',')[0].trim();
+
+      const row = document.createElement('div');
+      row.className = 'cart-item';
+      row.innerHTML =
+        '<img src="' + firstImg + '" alt="' + title + '" />' +
+        '<div class="cart-item-info">' +
+          '<span class="cart-item-name">' + title + '</span>' +
+          '<span class="cart-item-price">' + el.dataset.price + '</span>' +
+        '</div>' +
+        '<button type="button" class="cart-item-remove" aria-label="Remove ' + title + '">✕</button>';
+      row.querySelector('.cart-item-remove').addEventListener('click', () => removeFromCart(id));
+      itemsWrap.appendChild(row);
+    });
+
+    totalEl.textContent = '$' + total.toFixed(0);
+    emptyNote.style.display = cart.length ? 'none' : 'block';
+    checkoutBtn.style.display = cart.length ? 'block' : 'none';
+  }
+
+  function updateCartCount(){
+    document.getElementById('cartCount').textContent = cart.length;
+  }
+
+  function renderProductButtons(){
+    document.querySelectorAll('.product[data-id]').forEach(el => {
+      const id = el.dataset.id;
+      const btn = el.querySelector('.add-cart-btn');
+      if (!btn) return;
+      if (el.dataset.soldOut === 'true') {
+        btn.textContent = 'Sold out';
+        btn.disabled = true;
+        return;
+      }
+      if (isInCart(id)) {
+        btn.textContent = '✓ In cart — remove';
+        btn.classList.add('is-in-cart');
+      } else {
+        btn.textContent = '+ Add to cart';
+        btn.classList.remove('is-in-cart');
+      }
+    });
+  }
+
+  function renderAll(){
+    renderCartDrawer();
+    updateCartCount();
+    renderProductButtons();
+    if (currentModalId) syncModalCartButton(currentModalId);
+  }
+
+  // ----- cart drawer open/close -----
+  const cartToggle  = document.getElementById('cartToggle');
+  const cartOverlay = document.getElementById('cartOverlay');
+  const cartClose   = document.getElementById('cartClose');
+
+  cartToggle.addEventListener('click', () => {
+    cartOverlay.classList.add('is-open');
+    document.body.classList.add('modal-open');
+  });
+  cartClose.addEventListener('click', closeCart);
+  cartOverlay.addEventListener('click', (e) => { if (e.target === cartOverlay) closeCart(); });
+  function closeCart(){
+    cartOverlay.classList.remove('is-open');
+    document.body.classList.remove('modal-open');
+  }
+
+  // ----- checkout -----
+  document.getElementById('cartCheckoutBtn').addEventListener('click', async () => {
+    const items = cart
+      .map(id => {
+        const el = getProductById(id);
+        return el ? { priceId: el.dataset.priceId, title: el.dataset.title } : null;
+      })
+      .filter(i => i && i.priceId);
+
+    if (!items.length) return;
+
+    const btn = document.getElementById('cartCheckoutBtn');
+    btn.disabled = true;
+    btn.textContent = 'Redirecting…';
+
+    try {
+      const res = await fetch('/api/create-checkout-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ items })
+      });
+      const data = await res.json();
+      if (data.url) {
+        window.location = data.url;
+      } else {
+        throw new Error('No checkout URL returned');
+      }
+    } catch (err) {
+      alert('Could not start checkout. Please try again.');
+      btn.disabled = false;
+      btn.textContent = 'Checkout';
+    }
+  });
+
+  // ----- product modal -----
+  const overlay  = document.getElementById('modalOverlay');
+  const track    = document.getElementById('modalTrack');
+  const dotsWrap = document.getElementById('modalDots');
+  const prevBtn  = document.getElementById('modalPrev');
+  const nextBtn  = document.getElementById('modalNext');
+  const closeBtn = document.getElementById('modalClose');
+  const titleEl  = document.getElementById('modalTitle');
+  const descEl   = document.getElementById('modalDesc');
+  const priceEl  = document.getElementById('modalPrice');
+  const cartBtn  = document.getElementById('modalCartBtn');
+
+  let lastFocused = null;
+  let currentModalId = null;
+
+  function syncModalCartButton(id){
+    const el = getProductById(id);
+    if (!el) return;
+    if (el.dataset.soldOut === 'true') {
+      cartBtn.textContent = 'Sold out';
+      cartBtn.disabled = true;
+      return;
+    }
+    cartBtn.disabled = false;
+    cartBtn.textContent = isInCart(id) ? '✓ In cart — remove' : 'Add to cart';
+  }
+
+  function openModal(card) {
+    lastFocused = document.activeElement;
+    currentModalId = card.dataset.id;
+
+    titleEl.textContent = card.dataset.title || '';
+    descEl.textContent  = card.dataset.desc || '';
+    priceEl.textContent = card.dataset.price || '';
+    syncModalCartButton(currentModalId);
+
+    const images = (card.dataset.images || '').split(',').map(s => s.trim()).filter(Boolean);
+    track.innerHTML = '';
+    dotsWrap.innerHTML = '';
+    images.forEach((src, i) => {
+      const img = document.createElement('img');
+      img.className = 'modal-slide';
+      img.src = src;
+      img.alt = (card.dataset.title || 'Product photo') + ' — image ' + (i + 1);
+      track.appendChild(img);
+
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'modal-dot' + (i === 0 ? ' is-active' : '');
+      dot.setAttribute('aria-label', 'Go to image ' + (i + 1));
+      dot.addEventListener('click', () => scrollToSlide(i));
+      dotsWrap.appendChild(dot);
+    });
+    track.scrollLeft = 0;
+
+    overlay.classList.add('is-open');
+    document.body.classList.add('modal-open');
+    closeBtn.focus();
+  }
+
+  function closeModal() {
+    overlay.classList.remove('is-open');
+    document.body.classList.remove('modal-open');
+    currentModalId = null;
+    if (lastFocused) lastFocused.focus();
+  }
+
+  cartBtn.addEventListener('click', () => {
+    if (!currentModalId) return;
+    if (isInCart(currentModalId)) removeFromCart(currentModalId);
+    else addToCart(currentModalId);
+  });
+
+  function scrollToSlide(index) {
+    track.scrollTo({ left: track.clientWidth * index, behavior: 'smooth' });
+  }
+  function currentSlideIndex() {
+    return Math.round(track.scrollLeft / (track.clientWidth || 1));
+  }
+  function updateDots() {
+    const idx = currentSlideIndex();
+    [...dotsWrap.children].forEach((dot, i) => dot.classList.toggle('is-active', i === idx));
+  }
+
+  document.querySelectorAll('.product[data-id]').forEach(card => {
+    const addBtn = card.querySelector('.add-cart-btn');
+    if (addBtn) {
+      addBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const id = card.dataset.id;
+        if (isInCart(id)) removeFromCart(id); else addToCart(id);
+      });
+    }
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('.add-cart-btn')) return;
+      openModal(card);
+    });
+    card.addEventListener('keydown', (e) => {
+      if ((e.key === 'Enter' || e.key === ' ') && !e.target.closest('.add-cart-btn')) {
+        e.preventDefault();
+        openModal(card);
+      }
+    });
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', (e) => {
+    if (overlay.classList.contains('is-open')) {
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'ArrowRight') scrollToSlide(Math.min(currentSlideIndex() + 1, dotsWrap.children.length - 1));
+      if (e.key === 'ArrowLeft') scrollToSlide(Math.max(currentSlideIndex() - 1, 0));
+    }
+  });
+  prevBtn.addEventListener('click', () => scrollToSlide(Math.max(currentSlideIndex() - 1, 0)));
+  nextBtn.addEventListener('click', () => scrollToSlide(Math.min(currentSlideIndex() + 1, dotsWrap.children.length - 1)));
+
+  let scrollTicking = false;
+  track.addEventListener('scroll', () => {
+    if (!scrollTicking) {
+      scrollTicking = true;
+      requestAnimationFrame(() => { updateDots(); scrollTicking = false; });
+    }
+  });
+
+  // ----- reveal-on-scroll (unchanged) -----
+  const revealEls = document.querySelectorAll('.reveal');
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) {
+    revealEls.forEach(el => el.classList.add('is-in'));
+  } else {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => io.observe(el));
+  }
+
+  renderAll();
+</script>
+
+</body>
+</html>

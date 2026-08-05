@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — Alona Ceramics</title>
+<meta name="description" content="Alona Ceramics — get in touch, collaborations, and commissions." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="sig">Alona</span>
+      <span class="sub">ceramics</span>
+    </a>
+    <div class="header-right">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav-link" href="index.html">About</a>
+        <a class="nav-link" href="shop.html">Shop</a>
+        <a class="nav-link is-active" href="contact.html">Contact</a>
+      </nav>
+      <a href="https://www.instagram.com/alonaceramics" class="nav-link" aria-label="Instagram" target="_blank" style="display:flex; align-items:center; gap:6px;">
+        <span class="ig" aria-hidden="true"></span> IG
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero wrap" style="padding-bottom:56px;">
+    <p class="eyebrow reveal">Seattle, WA — say hello</p>
+    <div class="hero-grid">
+      <h1 class="headline reveal">Let's make<br /><em>something.</em></h1>
+      <div class="hero-copy reveal">
+        <p>Whether it's a custom order, a collaboration, or just a question about a glaze — I read every message myself and try to reply within a couple of days.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="collab">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="title">Collaborate</h2>
+        <p class="section-note">Open to</p>
+      </div>
+      <div class="materials-grid">
+        <div class="materials-copy reveal">
+          <p>I like working with cafés, restaurants, and small hospitality spaces on custom tableware — mugs, plates, and serving pieces built around a specific menu or space. I'm also open to pairing up with other makers on limited joint runs, and to editorial or styling work where the pieces need to hold up on camera as well as in the hand.</p>
+          <p>If you're planning a workshop, pop-up, or market and think the work would be a fit, I'd love to hear the details — space, dates, and what you have in mind.</p>
+        </div>
+        <div class="collab-photo reveal">
+          <img src="images/cup-shelf.jpg" alt="Studio collaboration work" style="object-position: 90% 42%;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="contact">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="title">Contact</h2>
+        <p class="section-note">Reach out directly</p>
+      </div>
+
+      <div class="materials-grid">
+        <div class="spec-sheet reveal">
+          <div class="spec-row"><span class="spec-label">Email</span><span class="spec-value"><a href="mailto:krutko.alona@gmail.com" style="color:inherit; border-bottom:1px solid var(--clay); text-decoration:none;">krutko.alona@gmail.com</a></span></div>
+          <div class="spec-row"><span class="spec-label">Instagram</span><span class="spec-value"><a href="https://www.instagram.com/alonaceramics" target="_blank" rel="noopener" style="color:inherit; border-bottom:1px solid var(--clay); text-decoration:none;">@alonaceramics</a></span></div>
+          <div class="spec-row"><span class="spec-label">Commissions</span><span class="spec-value">Currently open</span></div>
+          <div class="spec-row"><span class="spec-label">Studio</span><span class="spec-value">Seattle, WA</span></div>
+        </div>
+        <div class="materials-copy reveal">
+          <p>For custom orders, include a rough idea of quantity, intended use, and any glaze preferences from the studio palette — that's usually enough for me to put together a quote and a rough timeline.</p>
+          <p>Wholesale and press inquiries are welcome by email; please note that turnaround on custom pieces runs 3–6 weeks depending on the current queue.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="sig">Alona</div>
+        <div class="copyright">© <span id="y"></span> Alona Ceramics</div>
+      </div>
+      <div class="pills">
+        <span class="pill">Seattle, WA</span>
+        <span class="pill">Stoneware</span>
+        <span class="pill">Earthenware</span>
+        <span class="pill">Cone 4–6</span>
+      </div>
+    </div>
+    <div class="contact-row">
+      <!-- <span>Studio inquiries &amp; commissions</span> -->
+      <a href="mailto:krutko.alona@gmail.com">krutko.alona@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) {
+    revealEls.forEach(el => el.classList.add('is-in'));
+  } else {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => io.observe(el));
+  }
+</script>
+
+</body>
+</html>
