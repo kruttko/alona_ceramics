@@ -203,6 +203,8 @@
   </div>
 </div>
 
+<script src="cart.js"></script>
+
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
 
@@ -356,28 +358,29 @@
   const cartBtn  = document.getElementById('modalCartBtn');
 
   let lastFocused = null;
-  let currentModalId = null;
+window.currentModalId = null;
+let currentCard = null;
 
-  function syncModalCartButton(id){
-    const el = getProductById(id);
-    if (!el) return;
-    if (el.dataset.soldOut === 'true') {
-      cartBtn.textContent = 'Sold out';
-      cartBtn.disabled = true;
-      return;
-    }
-    cartBtn.disabled = false;
-    cartBtn.textContent = isInCart(id) ? '✓ In cart — remove' : 'Add to cart';
+window.syncModalCartButton = function (id) {
+  if (!currentCard) return;
+  if (currentCard.dataset.soldOut === 'true') {
+    cartBtn.textContent = 'Sold out';
+    cartBtn.disabled = true;
+    return;
   }
+  cartBtn.disabled = false;
+  cartBtn.textContent = cartApp.isInCart(id) ? '✓ In cart — remove' : 'Add to cart';
+};
 
-  function openModal(card) {
-    lastFocused = document.activeElement;
-    currentModalId = card.dataset.id;
+function openModal(card) {
+  lastFocused = document.activeElement;
+  window.currentModalId = card.dataset.id;
+  currentCard = card;
 
-    titleEl.textContent = card.dataset.title || '';
-    descEl.textContent  = card.dataset.desc || '';
-    priceEl.textContent = card.dataset.price || '';
-    syncModalCartButton(currentModalId);
+  titleEl.textContent = card.dataset.title || '';
+  descEl.textContent  = card.dataset.desc || '';
+  priceEl.textContent = card.dataset.price || '';
+  syncModalCartButton(window.currentModalId);
 
     const images = (card.dataset.images || '').split(',').map(s => s.trim()).filter(Boolean);
     track.innerHTML = '';
@@ -411,10 +414,20 @@
   }
 
   cartBtn.addEventListener('click', () => {
-    if (!currentModalId) return;
-    if (isInCart(currentModalId)) removeFromCart(currentModalId);
-    else addToCart(currentModalId);
-  });
+  if (!currentCard) return;
+  const id = currentCard.dataset.id;
+  if (cartApp.isInCart(id)) {
+    cartApp.removeFromCart(id);
+  } else {
+    cartApp.addToCart({
+      id: id,
+      title: currentCard.dataset.title,
+      price: currentCard.dataset.price,
+      priceId: currentCard.dataset.priceId,
+      image: (currentCard.dataset.images || '').split(',')[0].trim()
+    });
+  }
+});
 
   function scrollToSlide(index) {
     track.scrollTo({ left: track.clientWidth * index, behavior: 'smooth' });
