@@ -18,7 +18,7 @@ exports.handler = async (event) => {
       quantity: 1
     }));
 
-    const siteUrl = process.env.SITE_URL || 'https://your-site.netlify.app';
+    const siteUrl = process.env.SITE_URL || 'https://alonaceramics.netlify.app';
 
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
