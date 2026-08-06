@@ -446,12 +446,12 @@
 .product:hover .product-photo::after{opacity:.85;}
 .product.p1{
   background-image:url('images/shop/brown-jar-1.jpg');
-  background-size:cover;
+  background-size:150%;
   background-position:center;
 }
 .product.p2{
   background-image:url('images/shop/winterwood-cup-1.jpg');
-  background-size:cover;
+  background-size:150%;
   background-position:center;
 }
 .product.p3{
@@ -554,11 +554,12 @@ body.modal-open{overflow:hidden;}
   font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:.12em;
   text-transform:uppercase; color:var(--stone-dark);
   display:flex; align-items:center; gap:6px;
+  padding: 0px 0px 5px;
 }
 .cart-toggle:hover{color:var(--ink);}
 .cart-count{
   background:var(--clay); color:var(--linen); border-radius:50%;
-  width:18px; height:18px; display:inline-flex; align-items:center; justify-content:center;
+  width:20px; height:20px; display:inline-flex; align-items:center; justify-content:center;
   font-size:10px;
 }
 
