@@ -29,6 +29,9 @@ const session = await stripe.checkout.sessions.create({
   phone_number_collection: {
     enabled: true
   },
+  automatic_tax: {
+    enabled: true
+  },
   success_url: `${siteUrl}/success.html?session_id={CHECKOUT_SESSION_ID}`,
   cancel_url: `${siteUrl}/shop.html`
 });
