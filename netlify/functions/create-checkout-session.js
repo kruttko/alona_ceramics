@@ -24,7 +24,10 @@ const session = await stripe.checkout.sessions.create({
   mode: 'payment',
   line_items,
   shipping_address_collection: {
-    allowed_countries: ['US']
+    allowed_countries: ['US', 'CA']
+  },
+  phone_number_collection: {
+    enabled: true
   },
   success_url: `${siteUrl}/success.html?session_id={CHECKOUT_SESSION_ID}`,
   cancel_url: `${siteUrl}/shop.html`
